@@ -11,6 +11,7 @@ class Storage
         ~Storage();
         void addStu(Student*&);
         void print();
+        Storage& operator+=(Student*&);
 
     private:
         Student* students[MAX_NUM_STU];

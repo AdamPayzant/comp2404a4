@@ -10,9 +10,9 @@ Control::Control()
     monitors.push_back(new GPAMonitor(3.0));
     monitors.push_back(new FWMonitor(2));
     vector<string> studentInfo;
-    server.retreive(studentInfo);
+    server.retrieve(studentInfo);
     for(auto student = studentInfo.begin(); student != studentInfo.end(); ++student) {
-        
+
     }
 }
 

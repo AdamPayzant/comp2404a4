@@ -21,7 +21,6 @@ int main()
     ss.str(animalVect[i]);
     ss >> id >> animalType >> name >> age;
     cout << "Animal: "<< animalType << ", name " << setw(10) << name << ", age " << age << endl;
-    cout << ss << endl;
   }
 
 }

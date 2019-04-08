@@ -5,7 +5,7 @@ using namespace std;
 
 #include "Storage.h"
 
-Storage::Storage() 
+Storage::Storage()
 {
     numStudents = 0;
 }
@@ -24,10 +24,16 @@ void Storage::addStu(Student *&student)
     numStudents++;
 }
 
-void Storage::print() 
+void Storage::print()
 {
     int i;
     for(i = 0; i < numStudents; i++) {
         students[i]->print();
     }
+}
+
+Storage& Storage::operator+=(Student*& stu)
+{
+  this->addStu(stu);
+  return *this;
 }

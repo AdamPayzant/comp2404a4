@@ -12,6 +12,7 @@ List<T>::List()
     tail = NULL;
 }
 
+template <class T>
 List<T>::~List()
 {
     Node* current = head;
@@ -23,7 +24,8 @@ List<T>::~List()
     }
 }
 
-void List<T>::add(Course *&c)
+template <class T>
+void List<T>::add(T *&c)
 {
     //If the list is empty
     if(head == NULL) {
@@ -56,6 +58,7 @@ void List<T>::add(Course *&c)
     current->next = toAdd;
 }
 
+template <class T>
 void List<T>::print()
 {
     Node* current = head;
@@ -72,40 +75,9 @@ void List<T>::print()
     tail->data->print();
 }
 
-float List<T>::computeGPA()
+template <class T>
+List<T>& List<T>::operator+=(T*& c)
 {
-    try {
-    Node* current = head;
-    float gpa = 0;
-    int len = 0;
-    while(current != NULL) {
-        int grade;
-        current->data->getGrade(grade);
-        if(grade != -1) {
-            gpa += (float)grade;
-            len++;
-            current = current->next;
-        }
-    }
-    if(gpa > 0) {
-        gpa = gpa/(float)len;
-    }
-    return gpa;
-    }
-}
-
-int List<T>::computeNumFW()
-{
-    int numFW = 0;
-    Node* current = head;
-    while(current != NULL) {
-        int grade;
-        current->data->getGrade(grade);
-        if(grade < 1) {
-            numFW++;
-        }
-        current = current->next;
-    }
-    cout << "Num FW: " << numFW;
-    return numFW;
+  this->add(c);
+  return *this;
 }

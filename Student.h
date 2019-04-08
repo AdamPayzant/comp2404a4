@@ -2,7 +2,7 @@
 #define STUDENT_H
 
 #include "Course.h"
-#include "List.h"
+#include "CourseList.h"
 
 class Student
 {
@@ -14,9 +14,10 @@ class Student
     float computeGPA();
     int computeNumFW();
     int getID();
+    Student& operator+=(Course*&);
 
   private:
-    List* courses;
+    CourseList* courses;
     int    id;
 };
 

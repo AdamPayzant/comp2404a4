@@ -8,7 +8,7 @@ using namespace std;
 Student::Student(int i)
 {
   id = i;
-  courses = new List();  
+  courses = new CourseList();
 }
 
 Student::~Student() {
@@ -39,4 +39,10 @@ int Student::computeNumFW()
 int Student::getID()
 {
   return(id);
+}
+
+Student& Student::operator+=(Course*& adder)
+{
+  this->addCourse(adder);
+  return *this;
 }
