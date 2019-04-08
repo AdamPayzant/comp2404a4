@@ -1,11 +1,4 @@
-_____ ____  __  __ _____ ___  _  _    ___  _  _        _  _   
-/ ____/ __ \|  \/  |  __ \__ \| || |  / _ \| || |   /\ | || |  
-| |   | |  | | \  / | |__) | ) | || |_| | | | || |_ /  \| || |_
-| |   | |  | | |\/| |  ___/ / /|__   _| | | |__   _/ /\ \__   _|
-| |___| |__| | |  | | |    / /_   | | | |_| |  | |/ ____ \ | |  
-\_____\____/|_|  |_|_|   |____|  |_|  \___/   |_/_/    \_\|_|  
-
-v .4
+Comp2404 Assignment 4 v .4
 Developed by Edward Adam Payzant with code provided by Christine Laurendeau
 
 Creates a student auditing output with provided classes, marks, term taken, and instructor
