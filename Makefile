@@ -1,5 +1,5 @@
-sas: main.o Control.o View.o Storage.o List.o Student.o Course.o GPAMonitor.o FWMonitor.o StuServer.o
-	g++ -o sas main.o Control.o View.o Storage.o List.o Student.o Course.o GPAMonitor.o FWMonitor.o StuServer.o
+sas: main.o Control.o View.o Storage.o Student.o CourseList.o List.o Course.o GPAMonitor.o FWMonitor.o StuServer.o
+	g++ -o sas main.o Control.o View.o Storage.o Student.o CourseList.o List.o Course.o GPAMonitor.o FWMonitor.o StuServer.o
 
 main.o:	main.cc Control.h
 	g++ -c main.cc
@@ -19,7 +19,7 @@ View.o: View.cc View.h Student.h Storage.h
 Storage.o: Storage.cc Storage.h Student.h
 	g++ -c Storage.cc
 
-Student.o: Student.cc Student.h List.h Course.h
+Student.o: Student.cc Student.h CourseList.h Course.h
 	g++ -c Student.cc
 
 CourseList.o: CourseList.cc CourseList.h List.h Course.h

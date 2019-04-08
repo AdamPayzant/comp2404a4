@@ -1,4 +1,5 @@
 Comp2404 Assignment 4 v .4
+
 Developed by Edward Adam Payzant with code provided by Christine Laurendeau
 
 Creates a student auditing output with provided classes, marks, term taken, and instructor
@@ -38,4 +39,5 @@ Creates a student auditing output with provided classes, marks, term taken, and 
   - Inside program, following input prompts to input your information
 
 5. Notes
+  - Assuming StuServer.o is unchanged, program should start with students already added
   - in1.txt is optimal for testing a cases of input
