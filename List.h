@@ -6,7 +6,7 @@
 template <class T>
 class List
 {
-    private:
+  protected:
         class Node {
             public:
                 T* data;
