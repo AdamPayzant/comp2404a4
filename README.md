@@ -1,11 +1,14 @@
-Comp2404 Assignment 3 v 1.2
+Comp2404 Assignment 4 v .4
 Developed by Edward Adam Payzant with code provided by Christine Laurendeau
 
 Creates a student auditing output with provided classes, marks, term taken, and instructor
+> Now with "Cloud" Support
 
 1. Included Files
   - A3.PDF
   - Course.cc, Course.h
+  - StuServer.h, StuServer.o
+  - CourseList.cc, CourseList.h
   - List.cc, List.h
   - Student.cc, Student.h
   - Storage.cc, Storage.h
