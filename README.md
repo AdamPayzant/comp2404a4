@@ -2,7 +2,8 @@ Comp2404 Assignment 4 v .4
 Developed by Edward Adam Payzant with code provided by Christine Laurendeau
 
 Creates a student auditing output with provided classes, marks, term taken, and instructor
-** Now with "Cloud" Support **
+
+**Now with "Cloud" Support**
 
 1. Included Files
   - A3.PDF
