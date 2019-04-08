@@ -1,6 +1,3 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
 using namespace std;
 
 #include "Control.h"
@@ -12,7 +9,24 @@ Control::Control()
     vector<string> studentInfo;
     server.retrieve(studentInfo);
     for(auto student = studentInfo.begin(); student != studentInfo.end(); ++student) {
-
+      stringstream ss;
+      int id;
+      string info;
+      Student* stu;
+      ss >> id >> info;
+      stu = new Student(id);
+      while(1) {
+        if(info.substr(0, 2) == "0 ") {
+          break;
+        }
+        Course toAdd;
+        int courseCode, grade, term;
+        string instructor;
+        stringstream otherSS(info);
+        info = "";
+        otherSS << courseCode << term << grade << instructor << info;
+        stu->addCourse(new Course(courseCode, grade, term, instructor));
+      }
     }
 }
 

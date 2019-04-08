@@ -7,7 +7,7 @@ using namespace std;
 
 void initVect(vector<string>&);
 
-int main() 
+int main()
 {
   vector<string> animalVect;
   stringstream ss;

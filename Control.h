@@ -2,6 +2,10 @@
 #define CONTROL_H
 
 #include <vector>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <sstream>
 
 #include "Storage.h"
 #include "Student.h"
