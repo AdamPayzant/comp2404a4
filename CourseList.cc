@@ -16,8 +16,8 @@ float CourseList::computeGPA()
         if(grade != -1) {
             gpa += (float)grade;
             len++;
-            current = current->next;
         }
+        current = current->next;
     }
     if(gpa > 0) {
         gpa = gpa/(float)len;
@@ -37,6 +37,6 @@ int CourseList::computeNumFW()
         }
         current = current->next;
     }
-    cout << "Num FW: " << numFW;
+    //cout << "Num FW: " << numFW;
     return numFW;
 }

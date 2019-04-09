@@ -81,3 +81,6 @@ List<T>& List<T>::operator+=(T*& c)
   this->add(c);
   return *this;
 }
+
+
+template class List<Course>;

@@ -8,25 +8,34 @@ Control::Control()
     monitors.push_back(new FWMonitor(2));
     vector<string> studentInfo;
     server.retrieve(studentInfo);
-    for(auto student = studentInfo.begin(); student != studentInfo.end(); ++student) {
+    for(int i=0; i<studentInfo.size(); ++i) {
       stringstream ss;
+      string stuData = studentInfo[i];
       int id;
-      string info;
       Student* stu;
-      ss >> id >> info;
+      ss.str(stuData);
+      ss >> id;
       stu = new Student(id);
+      stuData=stuData.substr(stuData.find_first_of(" \t")+1);
       while(1) {
-        if(info.substr(0, 2) == "0 ") {
+        if(stuData.substr(0, 2) == "0") {
           break;
         }
-        Course toAdd;
+        ss.clear();
+        ss.str(stuData);
         int courseCode, grade, term;
         string instructor;
-        stringstream otherSS(info);
-        info = "";
-        otherSS << courseCode << term << grade << instructor << info;
+
+        ss >> courseCode >> term >> grade >> instructor;
         stu->addCourse(new Course(courseCode, grade, term, instructor));
+
+        stuData=stuData.substr(stuData.find_first_of(" \t")+1);
+        stuData=stuData.substr(stuData.find_first_of(" \t")+1);
+        stuData=stuData.substr(stuData.find_first_of(" \t")+1);
+        stuData=stuData.substr(stuData.find_first_of(" \t")+1);
       }
+      data += stu;
+      notify(stu);
     }
 }
 
